@@ -1,17 +1,15 @@
-/*
-COLORS:
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utility";
 
-*/
+@import "pages/home";
 
-$color-white:#fff;
-$color-grey:#555;
-$color-primary:#55c57a;
-$color-primary-light:#7ed56f;
-$color-primary-dark: #28b485;
+
 
 * {
     margin: 0;
@@ -67,80 +65,9 @@ $color-primary-dark: #28b485;
       font-size: 2.0rem;
       animation-name: moveInleft;
       animation-duration: 1s;
-      animation-timing-function: ease-in; }}
+      animation-timing-function: ease-in; }
+    }
   
-  @keyframes moveInright {
-    0% {
-      transform: translateX(-10rem);
-      opacity: 0; }
-    80% {
-      transform: translateX(1rem); }
-    100% {
-      transform: translateX(0);
-      opacity: 1; } }
   
-  @keyframes moveInleft {
-    0% {
-      transform: translateX(10rem);
-      opacity: 0; }
-    80% {
-      transform: translateX(-1rem); }
-    100% {
-      transform: translateX(0);
-      opacity: 1; } }
-  
-  @keyframes moveInBottom {
-    0% {
-      transform: translateY(3rem);
-      opacity: 0; }
-    100% {
-      transform: translateX(0);
-      opacity: 1; } }
-  
-      .btn{
-        &:link, &:visited {
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 1.5rem 4rem;
-            border-radius: 10rem;
-            display: inline-block;
-            transform: all .2s;
-            position: relative;
-            font-size: 1.5rem; }
-          
-          &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
-            &::after {
-              transform: scaleX(1.4) scaleY(1.6);
-              opacity: 0; }
-            }
-          &:active {
-            transform: translateY(-1px);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-          
-          &--white {
-            color: #777;
-            background-color: #fff; 
-            &::after {
-              color: #777;
-              background-color: #fff; }}
-          
-          &::after {
-            content: "";
-            height: 100%;
-            width: 100%;
-            display: inline-block;
-            border-radius: 100px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            transition: all .2s; }
-          
-          &--animated {
-            animation: moveInBottom .5s ease-in-out .75s;
-            animation-fill-mode: backwards; }
-          
-      }
+      
  

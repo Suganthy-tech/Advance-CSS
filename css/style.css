@@ -1,11 +1,31 @@
-/*
-COLORS:
+@keyframes moveInright {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+@keyframes moveInleft {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
 
-*/
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -61,75 +81,3 @@ html {
     animation-name: moveInleft;
     animation-duration: 1s;
     animation-timing-function: ease-in; }
-
-@keyframes moveInright {
-  0% {
-    transform: translateX(-10rem);
-    opacity: 0; }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    transform: translateX(0);
-    opacity: 1; } }
-
-@keyframes moveInleft {
-  0% {
-    transform: translateX(10rem);
-    opacity: 0; }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    transform: translateX(0);
-    opacity: 1; } }
-
-@keyframes moveInBottom {
-  0% {
-    transform: translateY(3rem);
-    opacity: 0; }
-  100% {
-    transform: translateX(0);
-    opacity: 1; } }
-
-.btn:link, .btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  border-radius: 10rem;
-  display: inline-block;
-  transform: all .2s;
-  position: relative;
-  font-size: 1.5rem; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  color: #777;
-  background-color: #fff; }
-  .btn--white::after {
-    color: #777;
-    background-color: #fff; }
-
-.btn::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  display: inline-block;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .2s; }
-
-.btn--animated {
-  animation: moveInBottom .5s ease-in-out .75s;
-  animation-fill-mode: backwards; }
