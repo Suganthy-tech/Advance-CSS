@@ -6,7 +6,8 @@
       transform: translateX(1rem); }
     100% {
       transform: translateX(0);
-      opacity: 1; } }
+      opacity: 1; } 
+    }
   
   @keyframes moveInleft {
     0% {
@@ -16,7 +17,8 @@
       transform: translateX(-1rem); }
     100% {
       transform: translateX(0);
-      opacity: 1; } }
+      opacity: 1; } 
+    }
   
   @keyframes moveInBottom {
     0% {
@@ -24,5 +26,6 @@
       opacity: 0; }
     100% {
       transform: translateX(0);
-      opacity: 1; } }
+      opacity: 1; }
+     }
   

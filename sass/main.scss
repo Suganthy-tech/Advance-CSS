@@ -6,68 +6,10 @@
 @import "base/base";
 @import "base/typography";
 @import "base/utility";
-
+@import "layout/header";
 @import "pages/home";
+@import "components/button";
 
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
-  
-  body {
-    font-family: "Lato",sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: $color-grey;
-    padding: 3rem; }
-  
-  html {
-    font-size: 10px; }
-  
-  .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.808), rgba($color-primary-dark, 0.795)), url("../img/hero.jpg");
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 0 100%, 100% 75vh, 100% 0);
-    position: relative; 
-    &__logo-box {
-      position: absolute;
-      top: 4rem;
-      left: 4rem; }
-    &__logo {
-      height: 3.5rem; }
-    &__text-box {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center; }}
-  
-  .heading {
-    color:$color-white;
-    margin-bottom: 1rem; 
-    &--main {
-      display: block;
-      text-transform: uppercase;
-      font-weight: 400;
-      letter-spacing: 3.5rem;
-      font-size: 6.0rem;
-      animation-name: moveInright;
-      animation-duration: 1s;
-      animation-timing-function: ease-in; }
-    &--sub {
-      display: block;
-      font-weight: 700;
-      letter-spacing: 1.75rem;
-      font-size: 2.0rem;
-      animation-name: moveInleft;
-      animation-duration: 1s;
-      animation-timing-function: ease-in; }
-    }
-  
-  
       
  
